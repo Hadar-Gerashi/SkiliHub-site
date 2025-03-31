@@ -8,7 +8,7 @@ const ForgotPassword = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8000/api/user/password-reset', { email });
+            const response = await axios.post('https://skillhub-1-a27y.onrender.com/api/user/password-reset', { email });
             setMessage(response.data.message); // המידע שהשרת מחזיר
         } catch (error) {
             console.log(error)
